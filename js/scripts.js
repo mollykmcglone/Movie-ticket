@@ -11,12 +11,17 @@ Ticket.prototype.priceAdjust = function() {
   console.log("made it!");
   if (this.movie === "The Room" || this.movie === "Carol") {
     console.log("made it here too");
-    return this.price - 2;
-  } else if (this.time === "7:00 p.m." || this.time === "9:30 p.m.") {
-    return this.price + 3;
-  } else if (this.age === "Over 55") {
-    return this.price - 2;
+    this.price -= 2;
   }
+  if (this.time === "7:00 p.m." || this.time === "9:30 p.m.") {
+    console.log("and another");
+    this.price += 3;
+  }
+  if (this.age === "Over 55") {
+    console.log("finally");
+    this.price -= 2;
+  }
+  return this.price;
 };
 
 //user interface logic
@@ -27,11 +32,10 @@ $(document).ready(function() {
     var selectedShowTime = $("#showTime").val();
     var selectedAge = $("#age").val();
     var newTicket = new Ticket(selectedMovie, selectedShowTime, selectedAge, 7);
-    newTicket.priceAdjust();
 
     $("#show-ticket").show();
     $(".movie-name").text(newTicket.movie);
     $(".showtime").text(newTicket.time);
-    $(".price").text("$" + newTicket.price);
+    $(".price").text("$" + newTicket.priceAdjust());
   });
 });
