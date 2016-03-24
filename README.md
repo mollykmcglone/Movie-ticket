@@ -1,15 +1,14 @@
-<<<<<<< HEAD
-# Cakebook
+# Movie-ticket
 
 #### By Molly McGlone
 
 ## Description
 
-This application is a demonstration of constructors and prototypes using JavaScript to create an app to keep track of important cake tasting data.
+This application is a demonstration of constructors and prototypes using JavaScript.  The app asks users for information about themselves and the movie they want to see, then creates a customized movie ticket and price based on the user input.
 
 ## Setup
 
-Install Cakebook by cloning this repository.
+Install Movie-ticket by cloning this repository.
 
 ## Technologies Used
 
@@ -18,7 +17,5 @@ JavaScript and jQuery
 ### Legal
 
 Copyright (c) 2016 **Molly McGlone**
-=======
-# Movie-ticket
-An exercise for Epicodus practicing object-oriented Javascript
->>>>>>> af4020506a40e78688cb69c1caaff666f0144219
+
+
